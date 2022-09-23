@@ -1,13 +1,21 @@
 window.onload = function() {
+    variable=document.querySelector("#main")
+    mylist=""
+    $.ajax({
+        url: "http://localhost/Backend/news/news.php",
+        success: function (data) {
+          data = JSON.parse(data);
+        for (let i=0; i<data.length; i++) {
+            t
+        },
+        });
 
 
 
-
-
-    block=`<h2>Card Image</h2>
-    <p>Image at the top (card-img-top):</p>
+    block=`<h2>${title}</h2>
+    <p>${text}</p>
     <div class="card" style="width:400px">
-    <img class="card-img-top" src="" alt="Card image" style="width:100%">
+    <img class="card-img-top" src="${image}" alt="Card image" style="width:100%">
     <div class="card-body">
         <h4 class="card-title"></h4>
         <p class="card-text"></p>
