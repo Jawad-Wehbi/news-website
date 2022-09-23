@@ -2,9 +2,9 @@ window.onload = function() {
     variable=document.querySelector("#main")
     mylist=""
     $.ajax({
-        url: "http://localhost/Backend/news/news.php",
+        url: "http://localhost/news-website/article.php",
         success: function (data) {
-          data = JSON.parse(data);
+        data = JSON.parse(data);
         for (let i=0; i<data.length; i++) {
             title=data[i].title;
             text=data[i].text;
@@ -17,10 +17,10 @@ window.onload = function() {
                     <h4 class="card-title"></h4>
                     <p class="card-text"></p>
                 </div>`
-                mylist+=block
-        },
-        variable.innerHTML+=mylist
-        });
+                mylist+=block;
+        };
+        variable.innerHTML+=mylist;
+        }})
 
 
 
