@@ -1,8 +1,7 @@
-9:43
 <?php
 $host = "localhost";
 $db_user = "root";
 $db_pass = null;
-$db_name = "my_db";
+$db_name = "news";
 $mysqli = new mysqli($host, $db_user, $db_pass, $db_name);
 ?>
